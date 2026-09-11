@@ -1,6 +1,7 @@
 async function addFruit() {
   const form = document.getElementById("fruit-form");
-  const url = "http://localhost:3000/fruits/";
+  // const url = "http://localhost:3000/fruits/";
+  const url = "https://nodeclass-project.onrender.com/fruits/";
   const errorDiv = document.getElementById("error");
   
   form.addEventListener("submit", async (e) => {

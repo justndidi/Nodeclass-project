@@ -1,6 +1,6 @@
 async function app(){
     const form = document.getElementById("form");
-    const url = "http://localhost:3000/users/signup/";
+    const url = "https://nodeclass-project.onrender.com/users/signup/";
     const errorDiv = document.getElementById("error");
 
     form.addEventListener("submit", async (e)=>{

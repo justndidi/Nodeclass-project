@@ -2,7 +2,8 @@ function getFruitUrl() {
     const params = new URLSearchParams(window.location.search);
     const fruitId = params.get("id");
 
-    return `http://localhost:3000/fruits/${fruitId}/`;
+    // return `http://localhost:3000/fruits/${fruitId}/`;
+    return `https://nodeclass-project.onrender.com/fruits/${fruitId}`;
 }
 
 

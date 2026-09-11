@@ -14,7 +14,7 @@ async function refreshTokenFunction() {
     location.href = "./login.html";
     return;
   }
-  const url = "http://localhost:3000/users/token/refresh";
+  const url = "https://nodeclass-project.onrender.com/users/token/refresh";
   const payload = {
     refreshToken,
   };

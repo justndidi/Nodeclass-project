@@ -1,5 +1,5 @@
 async function fetchFruits() {
-  const url = "http://localhost:3000/fruits/";
+  const url = "https://nodeclass-project.onrender.com/fruits/";
   try {
     
     const response = await fetch(url);
