@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Catalog</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="page-header">
+        <div class="mark">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <circle cx="17" cy="19" r="11" fill="#3E7C8A" />
+            <path
+              d="M17 8C17 8 15 4 19 2"
+              stroke="#1B3A5C"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <div>
+            <h1>Fruit Catalog</h1>
+            <p>Every fruit on record, with its description.</p>
+          </div>
+        </div>
+        <a href="add.html" class="btn btn-primary">Add new fruit</a>
+      </header>
+
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th class="col-actions">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+
+    
+            <!-- <tr>
+              <td><span class="fruit-name">Apple</span></td>
+              <td>
+                <span class="fruit-desc"
+                  >Crisp and sweet-tart, eaten fresh or baked into pies.</span
+                >
+              </td>
+              <td class="col-actions">
+                <div class="actions-group">
+                  <a href="add.html?edit=apple" class="btn-text edit">Edit</a>
+                  <a href="delete.html?id=apple" class="btn-text delete"
+                    >Delete</a
+                  >
+                </div>
+              </td>
+            </tr> -->
+            
+          </tbody>
+        </table>
+      </div>
+
+      <p class="foot-note">
+        Wire the delete form's <code>action</code> and the edit link's target up
+        to your backend — this template has no scripting.
+      </p>
+    </div>
+
+    <script src="./scripts.js"></script>
+    <script src="./tokenRefresher.js"></script>
+  </body>
+</html>

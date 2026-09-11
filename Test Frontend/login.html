@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — Fruit Catalog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="auth-shell">
+  <div class="auth-wrap">
+
+    <div class="auth-mark">
+      <svg width="38" height="38" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="17" cy="19" r="11" fill="#3E7C8A"/>
+        <path d="M17 8C17 8 15 4 19 2" stroke="#1B3A5C" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <h1>Welcome back</h1>
+      <p>Log in to manage the fruit catalog.</p>
+    </div>
+
+    <div class="form-card">
+      <div id="error">
+        <!-- <p style="color: red; text-align: center;">Something went wrong</p> -->
+      </div>
+      
+      <form id="login-form" action="#" method="post">
+
+        <div class="field">
+          <label for="login-id">Username or email</label>
+          <input type="text" id="login-id" name="login-id" placeholder="jane@example.com" autocomplete="username" required>
+        </div>
+
+        <div class="field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="login-password" placeholder="Enter your password" autocomplete="current-password" required>
+        </div>
+
+        <div class="field-row">
+          <label class="field-check">
+            <input type="checkbox" id="remember" name="remember">
+            Remember me
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <div class="form-actions stacked">
+          <button type="submit" class="btn btn-primary">Log in</button>
+        </div>
+
+      </form>
+    </div>
+
+    <p class="auth-footer">Don't have an account? <a href="signup.html">Sign up</a></p>
+
+  </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

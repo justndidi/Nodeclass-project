@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Fruit — Fruit Catalog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a href="index.html" class="breadcrumb">&larr; Back to catalog</a>
+
+  <header class="page-header">
+    <div class="mark">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="17" cy="19" r="11" fill="#3E7C8A"/>
+        <path d="M17 8C17 8 15 4 19 2" stroke="#1B3A5C" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h1>Edit fruit</h1>
+        <p>Give it a name and a short description.</p>
+      </div>
+    </div>
+
+    <div id="error">
+      
+    </div>
+  </header>
+
+  <div class="form-card">
+    <form action="#" method="post" id="fruit-form">
+
+      <div class="field">
+        <label for="fruit-name">Name</label>
+        <input type="text" id="fruit-name" name="fruit-name" placeholder="e.g. Dragon fruit" required>
+      </div>
+
+      <div class="field">
+        <label for="fruit-desc">Description <span class="hint">what it tastes or looks like</span></label>
+        <textarea id="fruit-desc" name="fruit-desc" placeholder="e.g. Mildly sweet flesh speckled with tiny black seeds, wrapped in a pink, scaled skin." required></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Save fruit</button>
+        <a href="index.html" class="btn btn-secondary">Cancel</a>
+      </div>
+
+    </form>
+  </div>
+
+  <p class="foot-note">Point the form's <code>action</code> at your backend endpoint — this template has no scripting.</p>
+
+</div>
+
+<script src="editFruit.js"></script>
+<script src="tokenRefresher.js"></script>
+</body>
+</html>

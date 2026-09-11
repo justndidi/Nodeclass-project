@@ -1,0 +1,397 @@
+/* -----------------------------------------------------------
+   Fruit Catalog — shared styles
+   Palette: deep harbor blue + soft teal accent on a pale sky base
+----------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root{
+  --ink:        #16273A;   /* primary text */
+  --harbor:     #1B3A5C;   /* deep blue — headings, primary buttons */
+  --teal:       #3E7C8A;   /* secondary accent — links, edit action */
+  --rust:       #A6432F;   /* delete action — warm contrast, used sparingly */
+  --sky:        #F3F7FA;   /* page background */
+  --paper:      #FFFFFF;   /* card / table surface */
+  --line:       #D3DFE8;   /* hairline dividers */
+  --line-soft:  #E7EEF3;   /* row divider, lighter */
+  --muted:      #5C7186;   /* secondary text */
+
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans:  'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+*{ box-sizing: border-box; }
+
+html{ -webkit-text-size-adjust: 100%; }
+
+body{
+  margin: 0;
+  background: var(--sky);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a{ color: var(--teal); }
+
+.wrap{
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+/* ---------- Header ---------- */
+
+.page-header{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--harbor);
+}
+
+.page-header .mark{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.page-header h1{
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0;
+  color: var(--harbor);
+  letter-spacing: -0.01em;
+}
+
+.page-header p{
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn{
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.btn-primary{
+  background: var(--harbor);
+  color: var(--paper);
+}
+.btn-primary:hover{ background: #142c47; }
+
+.btn-secondary{
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--line);
+}
+.btn-secondary:hover{ border-color: var(--muted); }
+
+.btn-danger{
+  background: var(--rust);
+  color: var(--paper);
+}
+.btn-danger:hover{ background: #8A3626; }
+
+.btn-text{
+  background: none;
+  border: none;
+  padding: 4px 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.btn-text.edit{ color: var(--teal); }
+.btn-text.edit:hover{ text-decoration: underline; }
+
+.btn-text.delete{ color: var(--rust); }
+.btn-text.delete:hover{ text-decoration: underline; }
+
+/* ---------- Table ---------- */
+
+.table-card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th{
+  text-align: left;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: var(--muted);
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--sky);
+}
+
+th.col-actions, td.col-actions{
+  text-align: right;
+  white-space: nowrap;
+  width: 1%;
+}
+
+tbody td{
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+
+tbody tr:last-child td{ border-bottom: none; }
+
+tbody tr:hover{ background: #FAFCFD; }
+
+.fruit-name{
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.fruit-desc{
+  color: var(--muted);
+  font-size: 0.92rem;
+  max-width: 40ch;
+}
+
+td.col-actions form{ display: inline; }
+
+.actions-group{
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+/* ---------- Empty state ---------- */
+
+.empty-state{
+  padding: 64px 20px;
+  text-align: center;
+  color: var(--muted);
+}
+.empty-state p{ margin: 0 0 16px; }
+
+/* ---------- Form (add page) ---------- */
+
+.form-card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 32px;
+}
+
+.breadcrumb{
+  display: block;
+  margin-bottom: 20px;
+  font-size: 0.88rem;
+  color: var(--teal);
+  text-decoration: none;
+}
+.breadcrumb:hover{ text-decoration: underline; }
+
+.field{
+  margin-bottom: 22px;
+}
+
+.field label{
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--harbor);
+  margin-bottom: 6px;
+}
+
+.field .hint{
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-left: 6px;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"],
+.field textarea{
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 0.96rem;
+  color: var(--ink);
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--sky);
+}
+
+.field input[type="text"]:focus,
+.field input[type="email"]:focus,
+.field input[type="password"]:focus,
+.field textarea:focus{
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+  background: var(--paper);
+}
+
+.field textarea{
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.delete-preview{
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.delete-preview .fruit-name{ display: block; }
+.delete-preview .fruit-desc{
+  margin: 6px 0 0;
+  max-width: none;
+}
+
+.form-actions{
+  display: flex;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line-soft);
+  margin-top: 8px;
+}
+
+/* ---------- Auth pages ---------- */
+
+.auth-shell{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-wrap{
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-mark{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.auth-mark h1{
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 0;
+  color: var(--harbor);
+}
+
+.auth-mark p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.field-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -6px 0 22px;
+  font-size: 0.86rem;
+}
+
+.field-check{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+}
+
+.field-check input[type="checkbox"]{
+  width: 15px;
+  height: 15px;
+  accent-color: var(--teal);
+}
+
+.field-row a{
+  color: var(--teal);
+  text-decoration: none;
+}
+.field-row a:hover{ text-decoration: underline; }
+
+.form-actions.stacked{
+  flex-direction: column;
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+.form-actions.stacked .btn{
+  width: 100%;
+  text-align: center;
+}
+
+.auth-footer{
+  margin-top: 22px;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.auth-footer a{
+  color: var(--teal);
+  font-weight: 500;
+  text-decoration: none;
+}
+.auth-footer a:hover{ text-decoration: underline; }
+
+/* ---------- Footer ---------- */
+
+.foot-note{
+  margin-top: 28px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 560px){
+  .wrap{ padding: 32px 16px 64px; }
+  .page-header{ flex-direction: column; align-items: flex-start; gap: 16px; }
+  thead{ display: none; }
+  table, tbody, tr, td{ display: block; width: 100%; }
+  tbody tr{ border-bottom: 1px solid var(--line); padding: 16px 4px; }
+  tbody td{ border-bottom: none; padding: 4px 0; }
+  td.col-actions{ text-align: left; margin-top: 10px; }
+  .actions-group{ justify-content: flex-start; }
+  .form-card{ padding: 22px; }
+}
+
+/* Reduced motion / focus visibility baseline */
+:focus-visible{ outline: 2px solid var(--teal); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce){
+  *{ transition: none !important; }
+}

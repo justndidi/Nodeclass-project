@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Fruit — Fruit Catalog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a href="index.html" class="breadcrumb">&larr; Back to catalog</a>
+
+  <header class="page-header">
+    <div class="mark">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="17" cy="19" r="11" fill="#A6432F"/>
+        <path d="M17 8C17 8 15 4 19 2" stroke="#1B3A5C" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h1>Delete this fruit?</h1>
+        <p>This removes it from the catalog. It can't be undone.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="form-card">
+
+    <div id="delete-preview">
+      <span id="fruit-name">Apple</span>
+      <p id="fruit-desc">Crisp and sweet-tart, eaten fresh or baked into pies.</p>
+    </div>
+
+    <form action="#" method="post" id="form">
+      <div class="form-actions">
+        <button type="submit" class="btn btn-danger">Delete fruit</button>
+        <a href="index.html" class="btn btn-secondary">Cancel</a>
+      </div>
+    </form>
+
+  </div>
+
+  <p class="foot-note">Point the form's <code>action</code> at your backend endpoint, and pass along which fruit's ID to delete — this template has no scripting.</p>
+
+</div>
+
+<script src="deleteFruit.js"></script>
+</body>
+</html>
